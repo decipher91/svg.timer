@@ -15,28 +15,37 @@ Choose one of the following options:
 1. Download the latest stable release from
    [github](https://github.com/decipher91/svg.timer/archive/master.zip)
    and include
-   `dist/svgTimer.min.js` and `svgTimer.min.css`
+
+   `dist/svgTimer.min.js`
+
+   and
+
+   `svgTimer.min.css`
 
    or
-   
+
    `src/svgTimer.js` and `src/svgTimer.css` if you want to use non-minified version
 
 2. Clone the git repo
-   — `git clone https://github.com/decipher91/svg.timer.git`
+
+   `git clone https://github.com/decipher91/svg.timer.git`
 
 3. Install via bower
+
    `bower install svg-timer --save`
 
    Include link in your html file
 
    `bower_components/svg-timer/dist/svgTimer.min.js`
+
    `bower_components/svg-timer/dist/svgTimer.min.css`
 
 
 
 ## Usage
 
-```<div class="timer">
+```html
+<div class="timer">
 <script>
   $(function () {
       $('.timer').svgTimer();
@@ -53,7 +62,8 @@ Config options:
      [https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function)
 
   Extend options like this:
-     ```$('.svg-test').countDown({
+     ```javascript
+     $('.svg-test').countDown({
         time: 45,
         transition: 'cubic-bezier'
       });
