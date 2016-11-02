@@ -1,15 +1,7 @@
-# [HTML5 Boilerplate](https://html5boilerplate.com)
+# [SVG Timer](http://codepen.io/decipher91/pen/rMXYRV)
 
-[![Build Status](https://travis-ci.org/h5bp/html5-boilerplate.svg)](https://travis-ci.org/h5bp/html5-boilerplate)
-[![devDependency Status](https://david-dm.org/h5bp/html5-boilerplate/dev-status.svg)](https://david-dm.org/h5bp/html5-boilerplate#info=devDependencies)
 
-HTML5 Boilerplate is a professional front-end template for building
-fast, robust, and adaptable web apps or sites.
-
-This project is the product of many years of iterative development and
-combined community knowledge. It does not impose a specific development
-philosophy or framework, so you're free to architect your code in the
-way that you want.
+SVG Timer currently supports hexagonal countdown only, check demo at [codepen](http://codepen.io/decipher91/pen/rMXYRV)
 
 * Homepage: [https://html5boilerplate.com](https://html5boilerplate.com)
 * Source: [https://github.com/h5bp/html5-boilerplate](https://github.com/h5bp/html5-boilerplate)
@@ -21,71 +13,51 @@ way that you want.
 Choose one of the following options:
 
 1. Download the latest stable release from
-   [html5boilerplate.com](https://html5boilerplate.com/) or create a
-   custom build using [Initializr](http://www.initializr.com).
-2. Clone the git repo — `git clone
-   https://github.com/h5bp/html5-boilerplate.git` - and checkout the
-   [tagged release](https://github.com/h5bp/html5-boilerplate/releases)
-   you'd like to use.
+   [github](https://github.com/decipher91/svg.timer/archive/master.zip)
+   and include
+   `dist/svgTimer.min.js` and `svgTimer.min.css`
+   or
+   `src/svgTimer.js` and `src/svgTimer.css` if you want to use non-minified version
+
+2. Clone the git repo
+   — `git clone https://github.com/decipher91/svg.timer.git`
+
+3. Install via bower
+   `bower install svg-timer --save`
+
+   Include link in your html file
+
+   `bower_components/svg-timer/dist/svgTimer.min.js`
+   `bower_components/svg-timer/dist/svgTimer.min.css`
 
 
-## Features
 
-* HTML5 ready. Use the new elements with confidence.
-* Designed with progressive enhancement in mind.
-* Includes:
-  * [`Normalize.css`](https://necolas.github.com/normalize.css/)
-    for CSS normalizations and common bug fixes
-  * [`jQuery`](https://jquery.com/) via CDN, with a local fallback
-  * A custom build of  [`Modernizr`](http://modernizr.com/) for feature
-    detection
-  * [`Apache Server Configs`](https://github.com/h5bp/server-configs-apache)
-    that, among other, improve the web site's performance and security
-* Placeholder CSS Media Queries.
-* Useful CSS helper classes.
-* Default print styles, performance optimized.
-* An optimized version of the Google Universal Analytics snippet.
-* Protection against any stray `console` statements causing JavaScript
-  errors in older browsers.
-* "Delete-key friendly." Easy to strip out parts you don't need.
-* Extensive inline and accompanying documentation.
+## Usage
 
+`<div class="timer">
+<script>
+  $(function () {
+      $('.timer').svgTimer();
+  });
+</script>
+`
 
-## Browser support
+Config options:
 
-* Chrome *(latest 2)*
-* Edge *(latest 2)*
-* Firefox *(latest 2)*
-* Internet Explorer 8+
-* Opera *(latest 2)*
-* Safari *(latest 2)*
+* time: string representing number of seconds
+* track: color for main hexagon, can be rgb, rgba or hex
+* fill: color for counting fill, can be rgb, rgba or hex
+* transition: transition property (can be ease, linear, ease-in, ease-out, ease-in-out, step-start, cubic-bezier) --- see
+     [https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function)
 
-*This doesn't mean that HTML5 Boilerplate cannot be used in older browsers,
-just that we'll ensure compatibility with the ones mentioned above.*
-
-If you need legacy browser support (IE 6+, Firefox 3.6+, Safari 4+) you
-can use [HTML5 Boilerplate v4](https://github.com/h5bp/html5-boilerplate/tree/v4),
-but is no longer actively developed.
-
-
-## Documentation
-
-Take a look at the [documentation table of contents](dist/doc/TOC.md).
-This documentation is bundled with the project, which makes it readily
-available for offline reading and provides a useful starting point for
-any documentation you want to write about your project.
-
+  Extend options like this:
+     `$('.svg-test').countDown({
+        time: 45,
+        transition: 'cubic-bezier'
+      });`
 
 ## Contributing
 
-Hundreds of developers have helped make the HTML5 Boilerplate what it is
-today. Anyone and everyone is welcome to [contribute](CONTRIBUTING.md),
-however, if you decide to get involved, please take a moment to review
-the [guidelines](CONTRIBUTING.md):
-
-* [Bug reports](CONTRIBUTING.md#bugs)
-* [Feature requests](CONTRIBUTING.md#features)
-* [Pull requests](CONTRIBUTING.md#pull-requests)
 
 
 ## License
