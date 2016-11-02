@@ -3,11 +3,6 @@
 
 SVG Timer currently supports hexagonal countdown only, check demo at [codepen](http://codepen.io/decipher91/pen/rMXYRV)
 
-* Homepage: [https://html5boilerplate.com](https://html5boilerplate.com)
-* Source: [https://github.com/h5bp/html5-boilerplate](https://github.com/h5bp/html5-boilerplate)
-* Twitter: [@h5bp](https://twitter.com/h5bp)
-
-
 ## Quick start
 
 Choose one of the following options:
