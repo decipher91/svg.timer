@@ -1,0 +1,33 @@
+{
+  "name": "svg-timer",
+  "version": "0.9.0",
+  "description": "SVG timer",
+  "main": "dist/svgTimer.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/decipher91/svg.timer.git"
+  },
+  "keywords": [
+    "svg",
+    "timer",
+    "timer",
+    "jquery",
+    "plugins"
+  ],
+  "author": "Vitaliy Maltsev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/decipher91/svg.timer/issues"
+  },
+  "homepage": "https://github.com/decipher91/svg.timer#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-csso": "^2.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0",
+    "pump": "^1.0.1"
+  }
+}

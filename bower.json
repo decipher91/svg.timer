@@ -1,0 +1,24 @@
+{
+  "name": "svg-timer",
+  "description": "SVG timer",
+  "main": "dist/svgTimer.js",
+  "authors": [
+    "Vitaliy Maltsev"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "svg",
+    "timer",
+    "timer",
+    "jquery",
+    "plugins"
+  ],
+  "homepage": "https://github.com/decipher91/svg.timer",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
