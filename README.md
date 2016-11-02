@@ -16,7 +16,9 @@ Choose one of the following options:
    [github](https://github.com/decipher91/svg.timer/archive/master.zip)
    and include
    `dist/svgTimer.min.js` and `svgTimer.min.css`
+
    or
+   
    `src/svgTimer.js` and `src/svgTimer.css` if you want to use non-minified version
 
 2. Clone the git repo
@@ -34,13 +36,13 @@ Choose one of the following options:
 
 ## Usage
 
-`<div class="timer">
+```<div class="timer">
 <script>
   $(function () {
       $('.timer').svgTimer();
   });
 </script>
-`
+```
 
 Config options:
 
@@ -51,10 +53,11 @@ Config options:
      [https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function)
 
   Extend options like this:
-     `$('.svg-test').countDown({
+     ```$('.svg-test').countDown({
         time: 45,
         transition: 'cubic-bezier'
-      });`
+      });
+      ```
 
 ## Contributing
 
