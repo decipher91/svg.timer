@@ -61,13 +61,13 @@ Config options:
 * transition: transition property (can be ease, linear, ease-in, ease-out, ease-in-out, step-start, cubic-bezier) --- see
      [https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function)
 
-  Extend options like this:
-     ```javascript
+Extend options like this:
+```javascript
      $('.svg-test').countDown({
         time: 45,
         transition: 'cubic-bezier'
       });
-      ```
+```
 
 ## Contributing
 
