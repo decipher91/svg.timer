@@ -16,11 +16,7 @@ Choose one of the following options:
    [github](https://github.com/decipher91/svg.timer/archive/master.zip)
    and include
 
-   `dist/svgTimer.min.js`
-
-   and
-
-   `svgTimer.min.css`
+   `dist/svgTimer.min.js` and `svgTimer.min.css`
 
    or
 
