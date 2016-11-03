@@ -1,6 +1,3 @@
-/**
- * Created by decipher on 1.11.16.
- */
 (function ( $ ) {
     $.fn.svgTimer = function(options) {
         var opts = $.extend({}, $.fn.svgTimer.defaults, options);
@@ -25,23 +22,37 @@
 
             //set time and offset
             var time = opts.time; /* how long the timer runs for */
-            var initialOffset = '2160';
+            var initialOffset = 2160;
             var i = 1;
+
+            //draw initial hexagon
+            track.css('stroke', opts.track);
+            fill.css({
+                'stroke': opts.fill,
+                'stroke-dashoffset': initialOffset-(i*(initialOffset/time)) + 'px',
+                'transition': 'stroke-dashoffset 1s ' +  opts.transition
+            });
 
             //run timer
             var interval = setInterval(function() {
                 track.css('stroke', opts.track);
                 fill.css({
                     'stroke': opts.fill,
-                    'stroke-dashoffset': initialOffset-(i*(initialOffset/time)),
+                    'stroke-dashoffset': initialOffset-(i*(initialOffset/time)) + 'px',
                     'transition': 'stroke-dashoffset 1s ' +  opts.transition
                 });
-                counterText.text(i);
+                if(opts.direction === 'forward'){
+                    counterText.text(i);
+                } else if (opts.direction === 'backward') {
+                    var count = opts.time - i + 1;
+                    counterText.text(count);
+                }
+
                 if (i == time) {
                     clearInterval(interval);
                 }
                 i++;
-            }, 1000);
+            }, opts.interval);
         });
     };
 
@@ -49,6 +60,8 @@
         time: 60,
         track: 'rgb(56, 71, 83)',
         fill: 'rgb(104, 214, 198)',
-        transition: 'linear'
+        transition: 'linear',
+        direction: 'forward',
+        interval: 1000
     }
 }( jQuery ));

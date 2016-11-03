@@ -46,17 +46,20 @@ Choose one of the following options:
 
 Config options:
 
-* time: string representing number of seconds
+* time: time step
 * track: color for main hexagon, can be rgb, rgba or hex
 * fill: color for counting fill, can be rgb, rgba or hex
 * transition: transition property (can be ease, linear, ease-in, ease-out, ease-in-out, step-start, cubic-bezier) --- see
      [https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function)
+* direction: can be 'forward' starting from 0 or 'backward' starting from 'time' and going to 0
+* interval - interval for timer, set in miliseconds. Default is 1000 (1s). You can set it to any custom value or 60000 for minutes, 3600000 for hours and 86400000 for days
 
 Extend options like this:
 ```javascript
      $('.svg-test').countDown({
-        time: 45,
-        transition: 'cubic-bezier'
+        time: 24,
+        transition: 'cubic-bezier',
+        interval: 86400000
       });
 ```
 
