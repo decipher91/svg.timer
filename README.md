@@ -56,7 +56,7 @@ Config options:
 
 Extend options like this:
 ```javascript
-     $('.svg-test').countDown({
+     $('.svg-test').svgTimer({
         time: 24,
         transition: 'cubic-bezier',
         interval: 86400000
