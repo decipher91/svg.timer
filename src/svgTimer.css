@@ -3,11 +3,14 @@
     float: left;
 }
 
-.svg-hexagonal-counter h2 {
+.svg-hexagonal-counter .hint {
     text-align:center;
     position: absolute;
-    line-height: 200px;
+    /*line-height: 200px;*/
+    top: 40%;
     width: 100%;
+    font-size: 1.5em;
+    font-weight: 700;
 }
 
 /*svg {
