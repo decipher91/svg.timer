@@ -2,7 +2,7 @@
  * Created by decipher on 2.11.16.
  */
 $(function () {
-    $('.timer-days').svgTimer({
+    /*$('.timer-days').svgTimer({
         direction: 'backwards',
         time: 35,
         interval: 86400000,
@@ -28,5 +28,8 @@ $(function () {
         time: 60,
         interval: 1000,
         hint: 'seconds'
+    });*/
+    $('.timer').svgCountDown({
+
     });
 });
