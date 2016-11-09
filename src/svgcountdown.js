@@ -2,13 +2,14 @@
  * Created by decipher on 8.11.16.
  */
 (function ($) {
-    function setText(time, counter, i) {
-        var count = time - i;
+    function setText(time, counter) {
+        var count = 60 - time;
 
         counter.text(count);
     }
 
     function setInitialText(time, counter){
+        console.log('setting ' + counter);
         counter.text(time);
     }
 
@@ -23,7 +24,6 @@
         var m = Math.floor(diff % 86400 % 3600 / 60);
         var s = Math.floor(diff % 86400 % 3600 % 60);
         console.log(d + ' days, ' + h + ' hours, ' + m + ' minutes, ' + s + ' seconds');
-        console.log('diff: ' + diff);
 
         return {
             date: countDownDate,
@@ -102,16 +102,12 @@
 
             /* how long the timer runs for */
             var initialOffset = 2160;
-            var i = 1;
+            var i = date.s;
 
             setInitialText(date.d, daysHintCount);
             setInitialText(date.h, hoursHintCount);
             setInitialText(date.m, minutesHintCount);
             setInitialText(date.s, secsHintCount);
-
-            //set counter text
-            //setText(opts, hintCount, i);
-
 
             //draw initial hexagon
             track.css('stroke', opts.track);
@@ -119,54 +115,46 @@
             function setCounter(){
                 daysFill.css({
                     'stroke': opts.fill,
-                    'stroke-dashoffset': initialOffset - (i * (initialOffset / date.d))
+                    'stroke-dashoffset': initialOffset - (initialOffset / date.d)
                     //'transition': 'stroke-dashoffset 1s ' + opts.transition
                 });
 
 
                 hoursFill.css({
                     'stroke': opts.fill,
-                    'stroke-dashoffset': initialOffset - ((i * (initialOffset / 24)) * date.h )
+                    'stroke-dashoffset': initialOffset - ((initialOffset / 24) * date.h )
                     //'transition': 'stroke-dashoffset 1s ' + opts.transition
                 });
 
                 minutesFill.css({
                     'stroke': opts.fill,
-                    'stroke-dashoffset': initialOffset - ((i * (initialOffset / 60)) * date.m)
+                    'stroke-dashoffset': initialOffset - ((initialOffset / 60) * date.m)
                     //'transition': 'stroke-dashoffset 1s ' + opts.transition
                 });
-
-                secsFill.css({
-                    'stroke': opts.fill,
-                    'stroke-dashoffset': initialOffset - ((i * (initialOffset / 60)) * date.s)
-                });
-
             }
 
+
             setCounter();
+            secsFill.css({
+                'stroke': opts.fill,
+                'stroke-dashoffset': initialOffset - ((initialOffset / 60) * date.s)
+            });
 
             //run timer
             var interval = setInterval(function () {
-                /*secsFill.css({
-                    'stroke-dashoffset': initialOffset - ((i * (initialOffset / date.s))),
-                    'transition': 'stroke-dashoffset 1s ' + opts.transition
-                });*/
                 secsFill.css({
                     'stroke': opts.fill,
-                    //'stroke-dashoffset': initialOffset - ((i * (initialOffset / 60)) * date.s)
-                    //'stroke-dashoffset': initialOffset - ((i * (initialOffset / date.s)))
-                    //'stroke-dashoffset': initialOffset - ((i * (initialOffset /  date.s)) + ((initialOffset / 60)* date.s))
-                    //'stroke-dashoffset': initialOffset - ((i * (initialOffset / 60)) * date.s)
-                    'stroke-dashoffset': initialOffset - (i * (initialOffset / 60))
+                    'stroke-dashoffset': initialOffset - ((initialOffset / 60)* i),
+                    'transition': 'stroke-dashoffset 1s ' + opts.transition
 
                 });
                 //console.log(i * (initialOffset /  date.s));
                 //console.log(initialOffset / 60);
                 //if(date.s )
-                setText(date.s, secsHintCount, i);
+                setText(i, secsHintCount);
                 //console.log(i);
                 //console.log(date.s);
-                if (i == date.s) {
+                if (i == 60) {
                     console.log(i);
                     console.log(date.s);
                     console.log('time to rewrite');
@@ -174,11 +162,12 @@
                     //i++;
                     parseDate(opts.date);
                     setCounter();
+                    console.log(date.m);
                     setInitialText(date.d, daysHintCount);
                     setInitialText(date.h, hoursHintCount);
                     setInitialText(date.m, minutesHintCount);
-                    setInitialText(date.s, secsHintCount);
-                    i = 1;
+                    setText(i, secsHintCount);
+                    i = 0;
                     /*secsFill.css({
                         //'stroke-dashoffset': initialOffset - (i * (initialOffset / date.s)),
                         'stroke-dashoffset': initialOffset - ((i * (initialOffset / 60)) * date.s)
