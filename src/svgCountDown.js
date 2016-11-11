@@ -18,8 +18,6 @@
         counter.text(time);
     }
 
-    var testDate = '2017-01-23T00:00:00';
-
     function parseDate(date) {
         var dfd = jQuery.Deferred();
         var dateToParse = date;

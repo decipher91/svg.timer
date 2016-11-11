@@ -1,7 +1,7 @@
 # [SVG Timer](http://codepen.io/decipher91/pen/rMXYRV)
 
 
-SVG Timer currently supports hexagonal countdown only, check demo at [codepen](http://codepen.io/decipher91/pen/rMXYRV)
+SVG Hexagonal final countdown, displays days, hours, minutes and seconds to certain date [codepen](http://codepen.io/decipher91/pen/rMXYRV)
 
 ## Quick start
 
@@ -11,11 +11,11 @@ Choose one of the following options:
    [github](https://github.com/decipher91/svg.timer/archive/master.zip)
    and include
 
-   `dist/svgTimer.min.js` and `svgTimer.min.css`
+   `dist/svgCountDown.min.js` and `svgCountDown.min.css`
 
    or
 
-   `src/svgTimer.js` and `src/svgTimer.css` if you want to use non-minified version
+   `src/svgCountDown.js` and `src/svgCountDown.css` if you want to use non-minified version
 
 2. Clone the git repo
 
@@ -27,9 +27,9 @@ Choose one of the following options:
 
    Include link in your html file
 
-   `bower_components/svg-timer/dist/svgTimer.min.js`
+   `bower_components/svg-timer/dist/svgCountDown.min.js`
 
-   `bower_components/svg-timer/dist/svgTimer.min.css`
+   `bower_components/svg-timer/dist/svgCountDown.min.css`
 
 
 
@@ -39,27 +39,24 @@ Choose one of the following options:
 <div class="timer">
 <script>
   $(function () {
-      $('.timer').svgTimer();
+      $('.timer').svgCountDown();
   });
 </script>
 ```
 
 Config options:
 
-* time: time step
+* date: ISO date string with date and time, for example '2017-01-23T00:00:00'
 * track: color for main hexagon, can be rgb, rgba or hex
 * fill: color for counting fill, can be rgb, rgba or hex
 * transition: transition property (can be ease, linear, ease-in, ease-out, ease-in-out, step-start, cubic-bezier) --- see
      [https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function)
-* direction: can be 'forward' starting from 0 or 'backward' starting from 'time' and going to 0
-* interval - interval for timer, set in miliseconds. Default is 1000 (1s). You can set it to any custom value or 60000 for minutes, 3600000 for hours and 86400000 for days
+
 
 Extend options like this:
 ```javascript
-     $('.svg-test').svgTimer({
-        time: 24,
-        transition: 'cubic-bezier',
-        interval: 86400000
+     $('.timer').svgCountDown({
+        date: '2017-02-11T03:15:00'
       });
 ```
 

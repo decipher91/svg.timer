@@ -1,7 +1,7 @@
 {
   "name": "svgTimer",
   "title": "SVG Timer",
-  "description": "Customizable SVG hexagonal timer",
+  "description": "Customizable SVG hexagonal countdown",
   "keywords": [
     "jquery-plugins",
     "timer",

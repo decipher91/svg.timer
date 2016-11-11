@@ -1,6 +1,6 @@
 {
   "name": "svg-timer",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "SVG timer",
   "main": "dist/svgTimer.js",
   "scripts": {
