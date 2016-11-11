@@ -197,12 +197,9 @@
     };
 
     $.fn.svgCountDown.defaults = {
-        date: '2017-01-23T00:00:00',
-        direction: 'forward',
-        //track: 'rgb(56, 71, 83)',
-        track: '#582C27',
-        //fill: 'rgb(104, 214, 198)',
-        fill: '#DD1F2C',
+        date: '2017-01-23T00:00:00', //ISO format
+        track: '#582C27', //heg, rgb or rgba
+        fill: '#DD1F2C',  //heg, rgb or rgba
         transition: 'linear'
     }
 }(jQuery));
