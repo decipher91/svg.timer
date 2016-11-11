@@ -158,7 +158,7 @@
                 //run timer
                 var interval = setInterval(function () {
 
-                    if (i == 60) {
+                    if (i === 60) {
                         i = 0;
                         parseDate(opts.date).then(function(status){
                             date = status;
@@ -172,7 +172,7 @@
                         });
                     }
                     setText(i, secsHintCount);
-                    if (i == 0){
+                    if (i === 0){
                         secsFill.css({
 
                             'stroke': opts.fill,

@@ -1,7 +1,7 @@
-# [SVG Timer](http://codepen.io/decipher91/pen/rMXYRV)
+# [SVG Timer](http://codepen.io/decipher91/pen/rWOzxK)
 
 
-SVG Hexagonal final countdown, displays days, hours, minutes and seconds to certain date [codepen](http://codepen.io/decipher91/pen/rMXYRV)
+SVG Hexagonal final countdown, displays days, hours, minutes and seconds to certain date [codepen](http://codepen.io/decipher91/pen/rWOzxK)
 
 ## Quick start
 
